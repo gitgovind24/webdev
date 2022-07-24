@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>mail validate</h1>
+    <form >
+        <input value="" type="email" id="email" placeholder=" type user email">
+        <!-- <input value = "" type="password" id="pas" placeholder=" type your passsword" > -->
+        <!-- <input value = "" type="number" id="age" placeholder=" type your age" > -->
+        <input value="submit" type="submit" onclick="validate()">
+        <!-- <button onclick ="validate()" value="submit"></button> -->
+    </form>
+    <script>
+        function validate() {
+            var em = document.getElementById("email").value
+            //    var pass= document.getElementById("pas").value
+            //    var age= document.getElementById("age").value
+            var regex = /^([a-z A-Z 0-9 \. _]+)@([a-z A-Z]+).([a-z A-Z]{2,6}).([a-z]{2,6})?$/;
+            if (em.trim == "") {
+                alert("missing validation");
+                return false;
+            }
+            else if ((regex.test(em)))
+             {
+                alert(" successful")
+                return true
+            }
+
+            else {
+                alert("wrong email")
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>

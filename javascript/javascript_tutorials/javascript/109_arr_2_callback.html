@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        ArrValues = [3, 5, 7, 11, 44, 5, 7, 7]
+        var ArrPrime = [], k = 0
+        function ArrayTraverse(ArrayInput) {
+            var ln = (ArrayInput.length - 1)
+            for (var i = 0; i <= ln; i++) {
+                console.log(ArrayInput)
+            }
+           
+        }
+        // ArrayTraverse(ArrValues)
+        function ArrayPrime(ArrayPrimeInput, Callback) {
+            var ln = (ArrayPrimeInput.length - 1)
+            for (var i = 0; i <= ln; i++) {
+                for (var j = 2; j < ArrayPrimeInput[i]; j++) {
+                    if (ArrayPrimeInput[i] % j == 0) {
+                        break
+                    }
+                    else {
+                        ArrPrime[k] = ArrayPrimeInput[i]
+                        k++
+                        break
+                    }
+                }
+               
+                
+            }
+            Callback(ArrPrime)
+
+        }
+        ArrayPrime(ArrValues, ArrayTraverse)
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        ArrValues = [3, 5, 7, 11, 44, 5, 7, 7]
+        var ArrPrime = [], k = 0
+        function ArrayTraverse(ArrayInput) {
+            var ln = (ArrayInput.length - 1)
+            for (var i = 0; i <= ln; i++) {
+                console.log(ArrayInput)
+            }
+           
+        }
+        // ArrayTraverse(ArrValues)
+        function ArrayPrime(ArrayPrimeInput) {
+            var ln = (ArrayPrimeInput.length - 1)
+            for (var i = 0; i <= ln; i++) {
+                for (var j = 2; j < ArrayPrimeInput[i]; j++) {
+                    if (ArrayPrimeInput[i] % j == 0) {
+                        break
+                    }
+                    else {
+                        ArrPrime[k] = ArrayPrimeInput[i]
+                        k++
+                        break
+                    }
+                }
+               
+                
+            }
+            console.log(ArrPrime)
+
+        }
+        ArrayPrime(ArrValues)
+    </script>
+</body>
+
+</html> -->

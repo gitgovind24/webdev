@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var unit=165;
+        var remainingunit=unit;
+        if (remainingunit>=500){
+            remainingunit=remainingunit-500;
+            var cost1=remainingunit*9.5;
+            var cosBelow500=100*4+150*6+250*7
+            var cost=cost1+cosBelow500;
+            
+        }
+        else if(remainingunit>=250&& remainingunit<500)
+        {
+        remainingunit=remainingunit-250;
+        var costBelow250=100*4+150*6;
+        var cost1=remainingunit*7;
+        cost=cost1+costBelow250;
+        }
+      
+        
+        else if(remainingunit>=250&&remainingunit<=100)
+        {
+            var costBelow100=100*4;
+            remainingunit=remainingunit-100;
+            var cost1=remainingunit*6;
+            cost=cost1+costBelow100
+
+        }
+        else{
+           var cost4=remainingunit*4;
+        }
+        // var cost=cost1+cost2+cost3+cost4
+        var tax=4.5*cost/100;
+        var totalCost=cost+tax;
+        console.log("tax:"+tax);
+        console.log("Bill:"+totalCost)
+    </script>
+</body>
+</html>

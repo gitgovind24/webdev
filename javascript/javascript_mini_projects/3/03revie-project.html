@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: hsl(205, 100%, 96%);
+        }
+
+        .line {
+            height: 0.25rem;
+            width: 5rem;
+            background: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .review {
+            width: 100vh;
+            background: white;
+            padding: 10px;
+
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+
+        #img-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0px auto 1.5rem;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 50%;
+        }
+
+
+        #auther {
+            text-align: center;
+        }
+
+        h6 {
+            text-align: center;
+            color: blueviolet;
+        }
+
+        p {
+            padding: 25px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            display: block;
+
+        }
+
+        #icon {
+            /* display: flex; */
+            /* justify-content: center; */
+            gap: 20px;
+            margin: 20px;
+        }
+        .button-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Our Reviews</h1>
+            <div class="line"></div>
+        </div>
+        <div class="review">
+            <div id="img-container">
+                <img src="person-1.jpeg" id="person-img" alt="">
+            </div>
+            <h4 id="auther">Metika Mona</h4>
+            <h6 id="job">The Boss</h6>
+            <p id="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eum deserunt impedit ratione
+                earum
+                quaerat quasi quia rem libero perspiciatis voluptates, repellat adipisci. Placeat laboriosam provident
+                numquam dolores, hic perspiciatis ipsam molestiae ex ab!
+            </p>
+            <div class="button-container">
+                <button class="prev-btn">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="next-btn">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
+
+                <button class="random-btn" type="button">Primary</button>
+            </div>
+        </div>
+    </div>
+    <script>
+const reviews = [
+  {
+    id: 1,
+    name: "susan smith",
+    job: "web developer",
+    img:
+      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+    text:
+      "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+  },
+  {
+    id: 2,
+    name: "anna johnson",
+    job: "web designer",
+    img:
+      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
+    text:
+      "Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.",
+  },
+  {
+    id: 3,
+    name: "peter jones",
+    job: "intern",
+    img:
+      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
+    text:
+      "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+  },
+  {
+    id: 4,
+    name: "bill anderson",
+    job: "the boss",
+    img:
+      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
+    text:
+      "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
+  },
+];
+
+const img = document.getElementById("person-img");
+const author = document.getElementById("auther");
+const job = document.getElementById("job");
+const info = document.getElementById("info");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const randomBtn = document.querySelector(".random-btn");
+console.log(author)
+console.log(img)
+console.log(job)
+console.log(info)
+console.log(prevBtn)
+console.log(nextBtn)
+console.log(randomBtn)
+var currentItem=0;
+window.addEventListener("DOMContentLoaded",function(){
+    showPerson(currentItem);
+    function showPerson(person)
+    {
+    const item=reviews[currentItem];
+    img.src=item.img;
+    auther.textContent=item.name;
+    info.textContent=item.text;
+    job.textContent=item.job;
+    }
+
+    nextBtn.addEventListener('click',function(){
+        currentItem++
+        if(currentItem>reviews.length-1){
+            currentItem=0;
+        }
+        showPerson(currentItem);
+    })
+    prevBtn.addEventListener('click',function(){
+        currentItem--;
+        if(currentItem<0){
+            currentItem=reviews.length-1;
+        }
+        showPerson(currentItem);
+    })
+    randomBtn.addEventListener('click',function(){
+        currentItem=Math.floor(Math.random() * reviews.length);
+        showPerson(currentItem);
+    })
+
+    
+});
+
+
+
+    </script>
+</body>
+
+</html>

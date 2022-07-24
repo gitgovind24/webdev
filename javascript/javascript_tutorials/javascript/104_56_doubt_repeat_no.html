@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var i,j;
+       
+            let product = 1, s = " ", r = 0, i, ans, flag = 1, str = " ",op;
+        function prime(n) {
+            for (i = 2; i < n; i++) {
+                r = n % i;
+                if (r == 0) {
+                    //  s=s+i+" ";
+                    flag = 1;
+                    break
+                }
+                else {
+                    flag = 0;
+                }
+            }
+
+            if (flag == 0) {
+                if(n==0){
+
+                s = ` `}
+                else{
+                    s = `${n}`
+                }
+            } else {
+                s = `${n}`
+            }
+
+            return [flag, s];
+        }
+        // return "no is not prime"; 
+        // for (j = x; j < y; j++) {
+
+        //     const [f, n] = prime(j)
+        //     if (f == 0) {
+        //         str = str + j + ", ";
+        //     }
+        // }
+
+        // console.log(" prime numbers in the range from " + x + " and " + y + " are :" + str)
+        // [flag,s]=prime(31)
+        // console.log(s)
+
+    
+
+    
+        var sum=0,p=50,series=" ",j,f=p-3
+        for(j=3;j<=p;j++){
+           var [flag1,s1]=prime(j)
+           var [flag2,s2]=prime(f)
+           f--
+        //    console.log("s1="+s1+"   flag1="+flag1+"   s2="+s2+"   flag2="+flag2)          
+           sum=s1+s2
+            if (flag1==0&&flag2==0&&s2!=0){
+                // sum=s1+s2
+            // x=s1;
+            // y=s2;
+              
+                // console.log("s1 is "+s1+" flag1 is "+flag1+"s2 is "+s2+" flag2 is "+flag2)            
+
+            // }
+            // console.log("p is"+p)
+            // console.log("i is"+j)
+           
+           
+            series=series+s1+" "+s2+"     ";
+            if(f==0){
+                break;
+                
+            }
+            // else{
+            //     if(sum==x){
+            //         return sum
+            //     }
+            }
+        
+        }
+    // }
+        
+        console.log("sum of prime number is"+series)
+
+ 
+    </script>
+</body>
+</html>

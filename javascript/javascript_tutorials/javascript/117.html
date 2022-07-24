@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var products = [
+            { title: "A" }, { title: "B" }, { title: "C" }, { title: "D" }, { title: "E" }
+        ];
+        var product={ title: "Y" }
+
+       function findindex(array,fn){
+        var arrayIndex=-1
+        for (let index = 0; index < array.length; index++) {
+            if (fn(array[index])) {
+                arrayIndex=index
+                break
+            }
+            
+        }
+        return arrayIndex
+       }
+
+       var index=findindex(products,function(pro){
+        return pro.title==product.title
+       })
+
+       console.log(index)
+    </script>
+</body>
+
+</html>

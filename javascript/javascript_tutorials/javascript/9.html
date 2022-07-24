@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+    //    var car_man="Audi"
+    //    var car_model="Q7"
+    //    var price=5000000;
+
+    //    function allwheeldrive(){
+    //        document.write("This car comes with four wheel")
+    //    }
+    //    allwheeldrive()
+
+var car={
+     car_man:"Audi",
+        car_model:"Q7",
+     price:5000000,
+
+
+allwheeldrive:function()
+{
+    document.write("This is a good car");
+
+ }
+}
+document.write ("<h1> value of car is " + car.car_man + "</h1>");
+document.write (car.allwheeldrive());
+car.allwheeldrive()
+car.car_colr="black";
+document.write("<h1> colour of car is " + car.car_colr + "</h1>")
+car.car_ful="petrol"
+document.write("<h1> fule of car is " + car.car_ful + "</h1>")
+car.newfun=function()
+{
+    return("function added succesfully")
+}
+document.write (car.newfun());
+
+delete car.car_model;
+document.write("<h1> model of car is " + car.car_model + "</h1>")
+car.price="56666"
+document.write("<h1> type obj of car is " + typeof(car.price) + "</h1>")
+document.write("<h1> price of car is " + car.price + "</h1>")
+    </script>
+</body>
+
+</html>

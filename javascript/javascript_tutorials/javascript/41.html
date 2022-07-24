@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Generators in JS</h1>
+    <script>
+// function* generator()
+// {
+//     let i=0;
+//     yield "BMW";
+//     yield "AUDI";
+//     yield "MERCEDES";
+//     yield "HONDA";
+
+// }
+function* generator()
+{
+    let i=0;
+    var arr=["BMW","AUDI","MERCEDDES","HONDA"]
+    while(i<=arr.length){
+        yield arr[i]
+        i++
+    }
+}
+
+ let gen=generator()
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+    </script>
+</body>
+</html>

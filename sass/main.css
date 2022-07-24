@@ -1,0 +1,55 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #272727;
+  color: red;
+  font-weight: 400;
+}
+
+.main {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.main .main__pchk1, .main .main__pchk1 .main .main__pchk1__pchk2 {
+  color: orange;
+}
+
+.main .main__pchk1:hover, .main .main__pchk1 .main .main__pchk1__pchk2:hover {
+  color: pink;
+}
+
+.main .main__pchk1 .main .main__pchk1__pchk2:hover {
+  color: aqua;
+}
+
+@media (max-width: 800px) {
+  .main .main__pchk1, .main .main__pchk1 .main .main__pchk1__pchk2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: red;
+  }
+}
+
+.light {
+  background: light(true, 100%);
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function SearchFromStart(arr, srch) {
+            var flag=false;
+            for (var i = arr.length; i > 0; i--) {
+                if (arr[i] == srch) {
+                    flag=true;
+                    loc=i
+                    break;
+                }
+                else{
+                    flag=false;
+                    loc=-1
+                }
+            }
+            return [flag,loc]
+        }
+        var srch = 320
+        var arr = [1,2,3,2,1,2,3,2,32]
+        const  [flag,lo] = SearchFromStart(arr, srch)
+        if (flag){
+            console.log("no "+srch+" foundation at position "+(lo+1)+" from last")
+        }
+        else{
+            console.log("not found ,Err:-1")
+        }
+       
+    </script>
+</body>
+
+</html>

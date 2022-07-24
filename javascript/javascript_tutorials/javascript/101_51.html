@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var i=0, sum = 0, p = 0, series = " ",revreseno,product=0,test=" ",f=234;
+        // console.log("no is"+n)
+        function GetDigit(n){
+
+        
+        while(n!=0) {
+
+            sum =  n% 10;
+            n = (n - sum) / 10;
+            // series += sum
+            if(sum<=7){
+            product=sum*8**i;
+            test=`${test}+${sum}*8**${i}`
+            // console.log("series is"+product)
+
+            p=product+p;
+            i++
+
+            }
+            else{
+                console.log("Not a valid octal number")
+                break
+            }
+            // for(j=4;j>=0;j--){
+
+            // }
+        }
+        return [test,p];
+    }
+
+    var [op,pr]=GetDigit(f)
+    console.log("decimal is" +pr)
+    console.log("series is" +test)
+    
+    
+   
+    </script>
+</body>
+</html>

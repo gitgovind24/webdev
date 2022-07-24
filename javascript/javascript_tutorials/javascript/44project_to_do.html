@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: lightblue;
+            height: 600px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container {
+            width: 50%;
+            background-color: white;
+            align-self: center;
+            display: block;
+            margin: 120px auto;
+            box-shadow: 5px 10px 20px black;
+        }
+
+        ul {
+            margin: 0;
+            border-left: 6px solid teal;
+            list-style-type: none;
+            padding: 0;
+            padding: 0;
+        }
+
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            background: whitesmoke;
+            font-size: 18px;
+            transition: 0.2s;
+            user-select: none;
+
+        }
+
+
+        ul li:hover {
+            background-color: #ddd;
+        }
+
+        ul li :nth-child(odd) {
+            background-color: whitesmoke;
+        }
+
+        ul li.checked {
+            background: #888;
+            color: white;
+            text-decoration: line-through;
+        }
+
+        ul li.checked::before {
+            content: "";
+            position: absolute;
+            border-color: whitesmoke;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate((45deg));
+            height: 15px;
+
+        }
+
+        .tabmargin {
+            margin-top: 40px;
+        }
+
+        .tabmargin2 {
+            margin-top: 79px;
+        }
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+
+        .header {
+            background-color: orange;
+            padding: 30px;
+
+            /* text-align: center; */
+
+        }
+
+        input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+            display: inline;
+        }
+
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: purple;
+            color: aquamarine;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.5s;
+            border-radius: 0;
+        }
+
+        .addBtn:hover {
+            background-color: beige;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="listbox" class="header">
+            <h2>My To Do List</h2>
+            <div class="tabmargin ">
+                <input type="text" id="item" placeholder="Title">
+                <span onclick="newElement()" class="addBtn">add</span>
+            </div>
+            <!-- <h2>\u00D7</h2> -->
+            <div class="tabmargin2">
+                <ul id="list">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                </ul>
+            </div>
+            <p id="test"></p>
+        </div>
+
+    </div>
+
+
+    <script>
+        var myNodeList = document.getElementsByTagName('li');
+        var i = 0;
+        for (i = 0; i < myNodeList.length; i++) {
+
+            var span = document.createElement('span');
+            var txt = document.createTextNode("\u00D7");
+            span.className = 'close'
+            span.appendChild(txt);
+            myNodeList[i].appendChild(span);
+            // alert(i)
+        }
+
+        var close = document.getElementsByClassName('close');
+        var i;
+        for (i = 0; i < close.length; i++) {
+
+            close[i].onclick = function () {
+
+                var div = this.parentElement;
+                div.style.display = 'none';
+            }
+            // document.getElementById("test").innerHTML = "Hello World";
+
+            // var list=document.querySelector('ul')
+            list.addEventListener('click', function (ev) {
+                // alert(ev.target.tagName)
+                if (ev.target.tagName === 'LI')
+                // alert(ev.target.tagName)
+                {
+                    // document.getElementById("test").innerHTML = "Hello World";
+                    ev.target.classList.toggle('checked')
+                    // alert(ev.target.classList.toggle)
+                }
+            }, false)
+
+            function newElement() {
+                var li = document.createElement('li');
+                var inputval = document.getElementById('item').value;
+                var t = document.createTextNode(inputval)
+                li.appendChild(t)
+                if (inputval === '') {
+                    alert("This field is emempty");
+                }
+                else{
+                    document.getElementById('list').appendChild(li)
+                    
+                }
+                var span = document.createElement('span');
+            var txt = document.createTextNode("\u00D7");
+            span.appendChild(txt)
+            li.appendChild(span)
+            span.className = 'close'
+                
+
+
+            for (i = 0; i < close.length; i++) {
+
+close[i].onclick = function () {
+
+    var div = this.parentElement;
+    div.style.display = 'none';
+}
+            }
+
+a!=b&&c<b||d>b
+isfriend=True
+isfriend&&loss?sale:
+
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

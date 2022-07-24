@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arrow function</h1>
+    <script>
+        function fun1(a,b){
+            return a+b;
+        }
+        var arrow2=(a,b)=>{
+return a+b;
+        } 
+var arrow1=(a,b)=> a+b;
+
+        function fun2(a,b){
+            console.log("welcome");
+        }
+
+        var arrow3=()=>{
+            console.log("cdsjjkdshj")
+            // return ("welcome");
+        }
+
+        var arrow4=mes=>{
+            console.log("cdsjjkdshj"+mes);
+            // return ("welcome");
+        }
+
+        console.log(arrow1(7,4));
+        (arrow3());
+        arrow4(" hi there");
+    </script>
+</body>
+</html>

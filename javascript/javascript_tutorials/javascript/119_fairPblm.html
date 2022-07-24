@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var station = [{ stn: "mumbai", distance: 0 },
+        { stn: "Thane", distance: 50 },
+        { stn: "Pune", distance: 100 },
+        { stn: "nasik", distance: 150 },
+        { stn: "hyd", distance: 200 },
+        { stn: "coim", distance:250 },
+        { stn: "rames", distance: 300 }]
+
+        var src="rames"
+        var des="coim"
+        var fair=100
+
+        var SrcIndex=station.findIndex(el=> el.stn==src)
+        var DstIndex=station.findIndex(el=> el.stn==des)
+        //   console.log(SrcIndex,DstIndex)
+
+        SrcNext = SrcIndex!=station.length-1?station[SrcIndex+1].stn:" "
+        SrcPrev = SrcIndex!=0?station[SrcIndex-1].stn:" "
+        // console.log(SrcNext,SrcPrev)
+
+        var isConsicutive=des==SrcNext||des==SrcPrev
+        
+        // console.log(isConsicutive)
+         var distance=station[SrcIndex].distance-station[DstIndex].distance
+        
+         var PositiveDistanceBettween=distance>0?distance:-distance
+
+        //  console.log(distance,PositiveDistanceBettwee)
+        if(!isConsicutive){
+            if (PositiveDistanceBettween>50){
+                var extradistance=PositiveDistanceBettween-50;
+                var extraFair=extradistance*1.5
+            }
+            fair=fair+extraFair
+        }
+        console.log(fair)
+
+          
+
+
+    </script>
+</body>
+
+</html>

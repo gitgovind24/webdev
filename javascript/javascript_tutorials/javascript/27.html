@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var functions = function () {
+            return new Promise(function (resolve, reject) {
+                resolve(" learnt callback functions");
+            });
+        };
+        var callback = function (message) {
+            return new Promise(function (resolve, reject) {
+                resolve(message + " learnt callback functions");
+            });
+        };
+
+        var Promises = function (message) {
+            return new Promise(function (resolve, reject) {
+                resolve(message + " Good to go for promise in JS");
+            });
+        };
+
+        functions().then(function (res) {
+            return callback(res);
+        }).then(function (res) {
+            return Promises(res);
+        }).then(function (res) {
+            console.log("Good to go :" + res);
+        })
+
+
+    </script>
+</body>
+
+</html>

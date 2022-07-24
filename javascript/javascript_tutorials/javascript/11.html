@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var rect2=new Object();
+        rect2.length=5;
+        rect2.width=10;
+        rect2.getarea=function(){
+            return this.length*this.width;        }
+    
+    rect2.getperimeter=function(){
+       return this.length+this.width;
+    }
+document.write("<h1> lenght of car is " +   rect2.length+ "</h1>")
+document.write("<h1> width of car is " +   rect2.width+ "</h1>")
+document.write("<h1>  Area is " +   rect2.getarea()+ "</h1>")
+document.write("<h1> perimeter is " +  rect2.getperimeter()+ "</h1>")
+
+
+</script>
+</body>
+</html>

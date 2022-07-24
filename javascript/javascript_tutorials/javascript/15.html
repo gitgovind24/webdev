@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>GetelementsbyTagName MEthod in JS</h1>
+    <div>This is section 1</div>
+    <div>This is section 2</div>
+    <div>This is section 3</div>
+    <div>This is section 4</div>
+    <br>
+    <input type="button" onclick ="fun2()" value="submit now" >
+    <script>
+// function fun2(){
+//     var x=document.getElementsByTagName("div");
+//     x[0].style.fontFamily="Courier New";
+//     x[1].style.color="blue";
+//     x[2].style.fontStyle="italic";
+//     x[3].style.background="red";
+// }
+
+function fun2(){
+    var x=document.getElementsByTagName("div");
+    for(var i=0;i<x.length;i++){
+        x[i].style.background="red";
+    }
+    // x[0].style.fontFamily="Courier New";
+    // x[1].style.color="blue";
+    // x[2].style.fontStyle="italic";
+    // x[3].style.background="red";
+}
+    </script>
+</body>
+</html>

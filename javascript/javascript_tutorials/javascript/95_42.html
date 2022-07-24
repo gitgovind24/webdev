@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var i=0, sum = 0, no1 = 0, no2, p = 0, sum2 = 0, fn, q = 10001,x=q, series = " ",revreseno,x=q,product=0,test=" ";
+        // console.log("no is"+n)
+        function GetDigit(n){
+
+        
+        while(n!=0) {
+
+            sum =  n% 10;
+            n = (n - sum) / 10;
+            // series += sum
+            product=sum*2**i;
+            test=`${test}+${sum}*2**${i}`
+            console.log("series is"+product)
+
+            p=product+p;
+            i++
+            // for(j=4;j>=0;j--){
+
+            // }
+        }
+        return [test,p];
+    }
+
+    var [op,pr]=GetDigit(11001)
+    console.log("series is"+op)
+    console.log("conversion is "+pr)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function abc(array, srch, fn) {
+            // var res = " "
+            var emptyArray=[];
+           array.forEach(element => {
+            var sqr= element*element
+            emptyArray.push(sqr)
+            fn(sqr,emptyArray)
+           });
+        }
+
+        function display(result,ea) {
+            console.log(result,ea)
+        }
+        var srch = 3
+
+        abc([1, 2, 3, 2, 32], srch, display)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regular expression</h1>
+    <script>
+        var regex =/on/g;
+        var str1=" on hello welcome on youtube . Hello"
+        // var op=regex.exec(str1);
+        // console.log(op)
+        // var op=regex.exec(str1);
+        // console.log(op)
+
+        // var str1=" on hello welcome on youtube . Hello"
+        // var op=regex.test(str1);
+        // console.log(op)
+
+        // var str1=" on hello welcome on youtube on. Hello"
+        // var op=str1.match(regex);
+        // console.log(op)
+       
+        var op=str1.replace(regex,"hi");
+        console.log(op)
+       
+    </script>
+</body>
+</html>

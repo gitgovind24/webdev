@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var s1 = prompt("enter side 1:");
+        // var s2 = prompt("enter side 1:");
+        // var s3 = prompt("enter side 1:");
+        var s1 = (50 ** (1 / 2));
+        var s2 = 5;
+        var s3 = 5;
+        var a = (((s2 ** 2) + (s3 ** 2)) ** (1 / 2));
+        var b = (((s2 ** 2) + (s1 ** 2)) ** (1 / 2));
+        var c = (((s1 ** 2) + (s3 ** 2)) ** (1 / 2));
+        console.log("a is" + a);
+        console.log("b is" + b);
+        console.log("c is" + c);
+
+        if ((s2 + s3) > s1 && (s1 + s3) > s2 && (s1 + s2) > s3) {
+            console.log("traingle can be form")
+
+            if (s1 == s2 && s2 == s3 && s3 == s1) {
+                console.log("traingle is equilateral")
+
+            }
+            else if (s1 == s2 || s1 == s3 || s3 == s2) {
+                console.log("traingle is isocsales")
+                if (s1 == a || s2 == a || s3 == a || s1 == b || s2 == b || s3 == b || s1 == c || s2 == c || s3 == c) {
+                    console.log("traingle is Right angle triangle")
+
+                }
+            }
+
+            else if (s1 != s2 && s2 != s3 && s3 != s1) {
+                console.log("traingle is scalan")
+                if (s1 == a || s2 == a || s3 == a || s1 == b || s2 == b || s3 == b || s1 == c || s2 == c || s3 == c) {
+                    console.log("traingle is Right angle triangle")
+
+                }
+            }
+        }
+
+        else {
+            console.log("traingle can not be form")
+        }
+    </script>
+</body>
+
+</html>

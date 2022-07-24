@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Amount = 1269;
+        var remAmount = Amount;
+        console.log("amount of " +Amount+ "can be divided as follows" )
+        if (remAmount >= 2000) {
+            var Note2000 = (Amount - (Amount % 2000)) / 2000;
+            var remAmount = remAmount - 2000 * Note2000;
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 2000 rup notes are " + Note2000) 
+
+        }
+        if (remAmount >= 500) {
+            var Note500 = (remAmount - (remAmount % 500))/500;
+            var remAmount = remAmount - 500 * Note500
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 500 rup notes are " + Note500) 
+        }
+        if (remAmount >= 200) {
+            var Note200 = (remAmount - (remAmount % 200))/200;
+            var remAmount = remAmount - 200 * Note200;
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 200 rup notes are " + Note200) 
+        }
+        if (remAmount >=100) {
+            var Note100 = (remAmount - (remAmount % 100))/100;
+            var remAmount = remAmount - 100 * Note100;
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 100 rup notes are " + Note100) 
+        }
+        if (remAmount >=50) {
+            var Note50 = (remAmount - (remAmount % 50))/50;
+            var remAmount = remAmount - 50 * Note50;
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 50 rup notes are " + Note50) 
+        }
+        if (remAmount >=20) {
+            var Note20 = (remAmount - (remAmount % 20))/20;
+            var remAmount = remAmount -20 * Note20;
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 20 rup notes are " + Note20) 
+        }
+        if (remAmount >=10) {
+            var Note10 = (remAmount - (remAmount % 10))/10;
+            var remAmount = remAmount - 10 * Note10;
+            // console.log("remaining amount is:"+remAmount )
+             console.log("Number of 10 rup notes are " + Note10) 
+        }
+        if (remAmount >=5) {
+            var Note5 = (remAmount - (remAmount % 5))/5;
+            var remAmount = remAmount - 5 * Note5;
+            
+             console.log("Number of 5 rup notes are " + Note5) 
+            //  console.log("remaining amount is:"+remAmount )
+        }
+        if(remAmount<5){
+        console.log("One rupess coins are "+remAmount)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

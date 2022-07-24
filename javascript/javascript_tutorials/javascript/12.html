@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rect3(length, width) {
+            this.length = length;
+            this.width = width;
+            this.getarea = function () {
+                return length * width;
+            }
+            this.getperi = function () {
+                return 2*(length + width);
+            }
+
+        }
+        var r1 = new rect3(26, 18);
+        document.write("<h1> length of car is " + r1.length + "</h1>")
+        document.write("<h1> width of car is " + r1.width + "</h1>")
+        document.write("<h1>  Area is " + r1.getarea() + "</h1>")
+        document.write("<h1> perimeter is " + r1.getperi() + "</h1>")
+        var r2= new rect3(12,36)
+        document.write("<h1> length of car is " + r2.length + "</h1>")
+        document.write("<h1> width of car is " + r2.width + "</h1>")
+        document.write("<h1>  Area is " + r2.getarea() + "</h1>")
+        document.write("<h1> perimeter is " + r2.getperi() + "</h1>")
+    </script>
+</body>
+
+</html>

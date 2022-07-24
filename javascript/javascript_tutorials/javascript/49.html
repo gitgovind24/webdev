@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var baseSalary = -80000;
+        var totalSalary = 0;
+        var tax = 0;
+        var yearlysalary = 0;
+        var totalonTaxPercent = 0;
+        var yearlysalaryAfterTax = 0;
+        var textPercent = 0;
+
+
+        if(baseSalary<0){
+            console.log("Invalid salary")
+        }
+        else{
+        if (baseSalary >= 0 && baseSalary <= 1000) {
+            hra = (baseSalary * 10) / 100;
+            da = (baseSalary * 5) / 100;
+            ta = (baseSalary * 5) / 100;
+        }
+        else if (baseSalary >= 10001 && baseSalary <= 25000) {
+            hra = (baseSalary * 15) / 100;
+            da = (baseSalary * 25) / 100;
+            ta = (baseSalary * 25) / 100;
+
+        }
+        else {
+            hra = (baseSalary * 50) / 100;
+            da = (baseSalary * 20) / 100;
+            ta = (baseSalary * 10) / 100;
+
+        }
+        totalSalary = baseSalary + ta + da + hra;
+        yearlysalary = 12 * totalSalary;
+
+        if (yearlysalary < 500000) {
+            totalonTaxPercent = 0;
+        }
+
+        else if (yearlysalary >= 500001 && yearlysalary <= 1000000) {
+            textPercent = 15;
+            totalonTaxPercent = ((yearlysalary - 500000) * textPercent / 100)
+        }
+        else  {
+            textPercent = 30;
+            totalonTaxPercent = ((yearlysalary - 500000) * 15 / 100)+(yearlysalary - 1000000) * textPercent / 100
+        }
+        
+        
+       
+        yearlysalaryAfterTax = yearlysalary - totalonTaxPercent;
+        montholtsalaryAfterTax=yearlysalaryAfterTax/12;
+
+        console.log("Monthly Base salary is " + baseSalary)
+        console.log("hra salary is: " + hra);
+        console.log("da salary is: " + da);
+        console.log("ta salary is: " + ta);
+        console.log("Totoal Monthly salary including hra,ta&da and without text is: " + totalSalary);
+        console.log("Totoal Monthly salary after text deduction is: " + montholtsalaryAfterTax);
+        console.log("Yearly salary without tax duduction is: " + yearlysalary)
+        console.log("Total tax on  salary is :" + totalonTaxPercent + " and tex percent is :" + textPercent);
+        console.log("Total salary after tax deduction is: " + yearlysalaryAfterTax);
+
+    }
+
+
+    </script>
+
+</body>
+
+</html>

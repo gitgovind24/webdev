@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function LcmUsingHcf(x,y){
+            var lcm=(x*y)/HCF(x,y);
+            return lcm;
+        }
+
+
+
+        function HCF(n01,n02){
+        var reminder,result=0,max=0,min=0,x=0;
+        if(n01>n02){
+            max=n01;
+            min=n02
+        }
+        else{
+            min=n01;
+            max=n02;
+        }
+        while(true){
+            
+            reminder=max%min;
+            if(reminder==0){
+                max=min;
+                return max
+             
+            }
+             x=min
+            min=reminder;
+            max=x;
+            // break
+            
+        }
+    }
+        var no1=24,no2=28
+        console.log("HCF of" +no1+ " and "+no2+" is :"+HCF(no1,no2))
+        console.log("LCM of" +no1+ " and "+no2+" is :"+LcmUsingHcf(no1,no2))
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+
+<body>
+    <script>
+        var minprice=1000;
+var maxprice=15000;
+brand=["oneplus","ipad"]
+title=["led tv","mic"]
+
+    var products = [
+  {title:"led tv", brand:"oneplus", price:1520, productId:"20"},
+  {title:"ipad", brand:"apple", price:10520, productId:"21"},
+  {title:"macbook", brand:"apple", price:15020, productId:"22"},
+  {title:"pencil", brand:"apple", price:15200, productId:"23"},
+  {title:"mic", brand:"yeti", price:15120, productId:"24"},
+  {title:"mobile", brand:"oneplus", price:11520, productId:"25"},
+]
+var filtered = products.filter((el)=>{
+  return el.price>=minprice && el.price < maxprice&&brand.includes(el.brand)&&title.includes(el.title)
+})
+
+
+console.log(filtered)
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>GetelementsbyClassName() MEthod in JS</h1>
+    <div class="cls1">This is section div 1</div>
+    <div class="cls1">This is section div 2</div>
+    <p>This is section para 3</p>
+    <p>This is section para 4</p>
+    <div class="cls1">This is section div 5</div>
+    
+    <input type="button" onclick ="fun2()" value="submit now" >
+    <script>
+// function fun2(){
+//     var x=document.getElementsByTagName("div");
+//     x[0].style.fontFamily="Courier New";
+//     x[1].style.color="blue";
+//     x[2].style.fontStyle="italic";
+//     x[3].style.background="red";
+// }
+
+function fun2(){
+    var x=document.getElementsByClassName("cls1");
+    for(var i=0;i<x.length;i++){
+        x[i].style.background="yellow";
+    }
+    //  x[0].style.fontFamily="Courier New";
+    // x[1].style.color="blue";
+    // //  x[2].style.fontStyle="italic";
+    // x[2].style.background="red";
+}
+    </script>
+</body>
+</html>

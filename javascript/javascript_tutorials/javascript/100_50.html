@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var i, sum = 0, no = 157,no2=no, series = " ", revreseno, x = no, q = no, op, no, rem;
+        // console.log("no is"+n)
+        while (no != 0) {
+            x = no / 8;
+            rem = no % 8;
+            no = x - rem / 8;
+            series += rem
+            // for(j=4;j>=0;j--){
+            // console.log("rem is "+rem)
+            // }
+        }
+
+        // var splitStr = series.split(''); // ["g","u","i","t","a","r"]
+        // var reversedArr = splitStr.reverse();
+        // var reversedStr = reversedArr.join('');
+        // console.log("The binary of " + q + " is: " + reversedStr);
+        function reverse(series) {
+            var n = series, reverse = 0, remainder;
+            // console.log("no is"+n)
+            while (n != 0) {
+                remainder = n % 10;
+                reverse = reverse * 10 + remainder;//is there ant alternative
+                n = Math.floor(n / 10);//is there ant alternative
+            }
+                     
+            return reverse
+        }
+
+        console.log("octal of decimal number "+no2+"  is  "+reverse(series) )
+
+        
+    </script>
+</body>
+
+</html>

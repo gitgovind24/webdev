@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Factorial(n){
+        var product=1;
+       for(var i=1;i<=n;i++) {
+         product=product*i;
+        }
+        return product;
+    }
+
+    function strongNumber(x){
+    var i = 0 
+    var sum=0
+    var no1=0
+    var no2=0
+    var s=0
+    var q=x
+    var n=x
+     var flag=0;
+        // console.log("no is"+n)
+        while(q!=0){
+            sum=q%10;
+            q=(q-sum)/10;
+            // console.log("digit is "+sum)
+            // no1=sum+no1;
+            // no2=no1**3
+            no2=Factorial(sum);
+            // console.log("factorial of digit is"+no2)
+            // console.log("sum of cube of digit  is "+no2)
+            // console.log("sum of cube of digit  is "+sum2)
+            s=s+no2;
+        }
+        if(s==n){
+            console.log(x+" is strong number sum is  "+s)
+            flag = 1
+            return [s,flag];
+
+        }
+        else{
+            console.log(x+" is not strong numbers sum is "+s)
+            flag=0
+            return [s,flag]
+        }
+    
+    }
+    // const [op,f] = strongNumber(145)
+    var s=1;
+    var e=90
+    var str=" "
+    for(var i=s;i<=e;i++){
+
+       const [op,f] =strongNumber(i)
+       if (f==1){
+       str=str+op+", ";
+       }
+    }
+    // console.log("numbers in the range from "+s+ " and " +e+" are :"+str)
+    // console.log("numbers in the range from "+op+ " and " +f+" are :")
+    </script>
+</body>
+</html>

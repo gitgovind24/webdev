@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function abc(arr, srch, fn) {
+            var res = " "
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == srch) {
+                    result = "element is in array"
+                    fn(result)
+                    break
+                }
+                else {
+                    result = "element is not in array"
+                    fn(result)
+                
+                }
+                
+            }
+        }
+
+        function display(result) {
+            console.log(result)
+        }
+        var srch = 3
+
+        abc([1, 2, 3, 2, 32], srch, display)
+
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function abc(arr,display) {
+            var foundIndex = -1
+            for (var i = 0; i < arr.length; i++) {
+                if (display(arr[i])) {
+                    foundIndex = i
+                    break 
+                }
+    
+            }
+            return foundIndex
+
+        }
+
+var arr1=[1,2,3],srch=21
+      var find= abc(arr1, function(arr){
+            return arr==srch})
+        console.log(find)
+    
+       
+
+    </script>
+</body>
+
+</html>

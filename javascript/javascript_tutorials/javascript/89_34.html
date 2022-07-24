@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         let product=1, s=" ",r=0,i;
+        //         function prime(n){
+        //        for(i=1;i<=n;i++) {
+        //         for(j=1;j<=n/2;j++){
+        //             r=n%j;
+        //          if(r==0){
+        //              s=s+i+" ";
+
+        //          }
+        //         }
+
+
+        //         }
+        //         return s;
+        //     }
+        //     var ans=prime(50);
+        // console.log("prime no are " +s)
+        let product = 1, s = " ", r = 0, i, ans, flag = 1, x = 1, y = 100, str = " ",op;
+        function prime(n) {
+
+           
+            for (i = 2; i < n; i++) {
+                
+                r = n % i;
+                if (r == 0) {
+                    //  s=s+i+" ";
+                    flag = 0;
+                    break
+                }
+                else {
+                    flag = 1;
+                }
+            }
+
+            if (flag == 0) {
+                s = `${n} is prime number `
+            } else {
+                s = `${n} is not  a prime number `
+            }
+
+            return [flag, n];
+        }
+        // return "no is not prime"; 
+        for (j = x; j < y; j++) {
+            
+            const [f, n] = prime(j)
+            if (f == 1) {
+                if(n==1){
+                    str=" "
+                }
+                else{
+                str = str + j + ", ";
+                }
+            }
+        }
+
+        console.log(" prime numbers in the range from " + x + " and " + y + " are :" + str)
+    //    [flag,n,s]=prime(31)
+    //     console.log(s)
+
+
+
+    </script>
+</body>
+
+</html>

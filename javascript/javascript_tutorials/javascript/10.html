@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+ function cars(car_man,car_model,car_price)
+ {
+     this.car_man=car_man;
+     this.car_model=car_model;
+     this.car_price=car_price;
+     this.allwheeldrive=function()
+     {
+         document.write("this is a good car")
+
+     }
+ }
+ var c1 = new cars("angjkengk","mgkdmdb",1000000)
+ var c2 = new cars("hjkkmgkld","bkmglkdkh",9000000)
+ c1.allwheeldrive();
+ document.write(c1.car_man) 
+ document.write(c1.car_model)
+ document.write(c1.car_price)
+ document.write(c2.car_man)
+ document.write(c2.car_model)
+ document.write(c2.car_price)
+
+
+
+ var str=new String();
+ document.write(typeof(str))
+    </script>
+</body>
+
+</html>

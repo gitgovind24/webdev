@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MAP in JS</h1>
+    <script>
+        var mycar = new Object()
+        {
+            mycar.maufacturer = "FORD"
+            mycar.name = "RAPTOR"
+            mycar.col = "white"
+        }
+        mycar.make - 2020;
+        console.log(mycar)
+
+        var mycarr = new Map()
+        {
+            // var obj={}
+            // var fun=function(){}
+            // mycarr.set(1,"BMW")
+            // mycarr.set(2,"AUDI")
+            // mycarr.set(3,"MERCEDES")
+            // mycarr.set("My car name is","BMW")
+            // mycarr.set({},"HONDA")
+            // mycarr.set(function(){},"MERCEDES")
+            //         }
+            //         console.log(mycarr)
+            //         console.log(mycarr.get("My car name is"))
+            //         console.log(mycarr.get({}))
+            //         console.log(mycarr.get({}))
+            //         console.log(mycarr.size)
+            // mycarr.set("My car name is","BMW")
+            // mycarr.set(obj,"HONDA")
+            // mycarr.set(fun,"MERCEDES")
+            //         }
+            //         console.log(mycarr)
+            //         console.log(mycarr.get("My car name is"))
+            //         console.log(mycarr.get(obj))
+            //         console.log(mycarr.get(fun))
+        }
+            var myArr = [[1, "BMW"], [2, "Audi"], [3, "Honda"]]
+            var mycarr = new Map(myArr)
+            var yourcarr=new Map(mycarr)
+            console.log(mycarr)
+            console.log(mycarr.get(2))
+            // for (let [key,value] of mycarr)
+            // {
+            //     console.log(key+"    "+value)
+            // }
+            for (let key of mycarr.keys())
+            {
+                console.log(key+"    ")
+            }
+            for (let values of mycarr.values())
+            {
+                console.log(values+"    ")
+            }
+
+            console.log(yourcarr)
+            console.log(mycarr==yourcarr)
+
+        
+    </script>
+</body>
+
+</html>

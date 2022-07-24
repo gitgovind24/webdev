@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var no=1634,i,remain=no,sum=0,no1=0,no2,p=0,sum2=0;
+        console.log("no is"+no)
+        while(no!=0){
+            sum=no%10;
+            no=(no-sum)/10;
+            // console.log("digit is "+sum)
+            no1=sum+no1;
+            // no2=no1**3
+            no2=sum**4;
+            sum=sum+p;
+            sum2=sum2+no2
+            // console.log("sum is digit is"+no1)
+            // console.log("sum of cube of digit  is "+no2)
+            console.log("sum of cube of digit  is "+sum2)
+        }
+        if(sum2==remain)
+        {
+            console.log("It is armstrong number")
+        }
+        else{
+            console.log("It is not armstrong number")
+        }
+        // console.log("sum is "+sum);
+    </script>
+</body>
+</html>

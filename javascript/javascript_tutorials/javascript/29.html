@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Timing function</h1>
+    <button onclick="start()">click me</button>
+    <button onclick="stop()">stop</button>
+    <script>
+        // var msg=()=>{
+        //     alert("welcome to here")
+        // }
+        // function start(){
+        //     setTimeout(msg,2000)
+        // }
+        var id=0;
+         var msg=()=>{
+            alert("welcome to here")
+        }
+        function start(){
+            id=setTimeout(msg,5000);
+        }
+        function stop(){
+            clearTimeout(id);
+            }
+        
+    </script>
+</body>
+</html>

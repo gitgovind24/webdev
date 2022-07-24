@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    var a=10,b=6,c=5,alpha,beta;
+    var D=(b**2-4*a*c);
+    var rootD=D**(1/2)
+    if(D>0)
+    {
+   console.log("roots are real ")
+   console.log("root of D is :"+rootD)
+    alpha=(-b+rootD)/2*a;
+    beta=(-b-rootD)/2*a;
+    console.log("Alpha is"+alpha+"Beta is:"+beta)
+    }
+    else if(D==0){
+        console.log(" Real and equal root")
+        console.log("root of D is :"+D**(1/2))
+        alpha=(-b+D**rootD)/2*a;
+    beta=(-b-D**rootD)/2*a;
+    console.log("Alpha= "+alpha+"and Beta="+beta);
+        
+    }
+    else{
+
+        console.log("D is :"+D)
+        console.log("Imaganiry roots")
+   
+        var Dpositive=-D;
+        var Dpositive=(Dpositive**(1/2))
+       var realpart=-b/(2*a);
+       var ImaganiryPositivePart=Dpositive/(2*a);
+       var ImaganiryNegativePart=-Dpositive/(2*a);
+       console.log("One root is :" +"Real part=" +realpart +" and imaganiry part is="+ImaganiryPositivePart+"j")
+       console.log("Second root is :" +"Real part=" +realpart +" and imaganiry part is="+ImaganiryNegativePart+"j")
+       
+    }
+ </script>
+</body>
+</html>

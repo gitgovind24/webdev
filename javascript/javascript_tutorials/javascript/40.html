@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iterators in JS</h1>
+    <script>
+
+        function cars(values){
+            let index=0;
+            return{
+                next:function(){
+                    if(index<values.length)
+                    return{
+                        value:values[index++],
+                        done:false
+                    }
+                    else
+                    {
+                        return{
+                            done:true
+                        }
+                    }
+                }
+            }
+        }
+        var arr=["BMW","AUDI","MERCEDDES","HONDA"]
+        // console.log(arr)
+        // console.log(arr.length)
+
+        // for (let i=0;i<=arr.length;i++){
+        //     console.log(arr[i])
+        // }
+
+        // for(let i of arr)
+
+        // {
+        //     console.log(i);
+        // }
+
+        var newCars=cars(arr);
+        console.log(newCars.next().value)
+        console.log(newCars.next().value)
+        console.log(newCars.next().value)
+        console.log(newCars.next().value)
+        console.log(newCars.next().value)
+    </script>
+</body>
+</html>

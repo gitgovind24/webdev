@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var products = [
+            { title: "led tv", brand: "oneplus" },
+            { title: "ipad", brand: "apple" },
+            { title: "macbook", brand: "apple" },
+            { title: "pencil", brand: "apple" },
+            { title: "mic", brand: "yeti" },
+            { title: "mobile", brand: "oneplus" }
+        ]
+
+        var filtered = [{ title: "mobile", brand: "oneplus" }, { title: "led tv", brand: "oneplus" }]
+
+        function findindex(array, fn) {
+            var arrayIndex = -1
+            for (let index = 0; index < array.length; index++) {
+                if (fn(array[index])) {
+                    return array[index]
+                }
+
+            }
+
+        }
+
+        var index = findindex(products, function (pro) {
+            return pro.title == "mic"
+
+        })
+
+        console.log(index)
+    </script>
+</body>
+
+</html>

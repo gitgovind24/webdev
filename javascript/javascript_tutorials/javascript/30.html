@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async-await</h1>
+   <script>
+     function makeorder(cofee){
+        return new Promise((resolve,reject)=>{
+            console.log("making request for a " +cofee)
+            if (cofee=="Black cofee"){
+                resolve("here is your cofee,have a nice day")
+            }
+            else{
+                reject("sorry! cofee can not be serverd")
+            }
+        })
+    };
+    function processorder(order)
+    {
+        return new Promise((resolve,reject)=>{
+            console.log("processing oreder");
+            resolve("Extr INFORMATION"+order)
+        })
+    };
+
+//     makeorder("Black cofee").then(order =>{
+//  console.log("order received")
+//  return processorder(order)
+//     }).then(processorder=>{
+//         console.log(processorder)
+//     }).catch(error=>{
+//         console.log(error);
+//     })
+async function func(){
+    try{
+    var order=await makeorder("black cofee");
+    console.log("ordr received");
+    var processorder=await processorder(order);
+    console.log(processorder);
+    }
+    catch{
+console.log("error")
+    }
+
+}
+func();
+   </script>
+</body>
+</html>

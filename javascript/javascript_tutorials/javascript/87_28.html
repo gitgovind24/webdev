@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let product = 1, s = 0, r = 0, i,f=1 ,n = 4000, ans, str = " ",str2=0;
+
+        for (i = f; i <= n; i++) {
+            for (j = 1; j < i ; j++) {
+                r = i % j;
+                if (r == 0) {
+                    s = s + j;
+                    str = str + j + " "
+                }
+               
+            }
+            if(s==i){
+                str2=str2+i
+                console.log("perfect number is"+i)
+
+            }
+            
+            // console.log(+i + "is  divisible by" + str)
+
+            str=" ";
+            s=0;
+           
+
+        }
+
+               // return "no is not prime"; 
+
+    </script>
+</body>
+
+</html>

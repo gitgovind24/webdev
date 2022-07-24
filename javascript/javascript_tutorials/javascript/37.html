@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="36.html" onsubmit="return validate()">
+    <input value = "" type="text" id="uname" placeholder=" type user nme" >
+    <input value = "" type="password" id="pas" placeholder=" type your passsword" >
+    <input value = "" type="number" id="age" placeholder=" type your age" >
+    <input value = "submit" type="submit" >
+
+</form>
+<script>
+    function validate()
+    {
+       var uname= document.getElementById("uname").value
+       var pass= document.getElementById("pas").value
+       var age= document.getElementById("age").value
+       if (uname.trim()==""|| pass.trim()==""||age.trim()==""){
+        alert("missing validation")
+        return false
+       }
+       else if(uname=="abc" && pass=="12345" && age>=13)
+       {
+        alert("signup successful")
+        return true
+       }
+       else if(age<=20){
+        alert("under age")
+        return false
+       }
+       else{
+        alert("wrong credentials")
+        return false
+
+       }
+    }
+</script>
+</body>
+</html>

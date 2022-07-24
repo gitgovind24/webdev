@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function empl(name,id,sal){
+            this.name=name;
+            this.id=id;
+            this.sal=sal;
+        }
+        empl.prototype.post=function()
+        {
+            return(this.name+ " "+" is acontent creater");
+        }
+        var Kaushal=new empl("kaushal",3555,10000);
+        console.log(Kaushal);
+        console.log(Kaushal.post());
+        document.write(Kaushal.post());
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class student {
+            constructor(name, age, roll) {
+                this.name = name;
+                this.age = age;
+                this.roll = roll;
+            }
+            org() {
+                return ("I am " + this.name + "from expert corner");
+            }
+            dob() {
+                return ("the date of birth of" + this.name + "is" + (2020 - this.age));
+            }
+
+            static add(a, b) {
+                return a + b;
+            }
+        }
+        class student1 extends student {
+            constructor(name,age,roll,lang,sec){
+                super(name,age,roll)
+                this.lang=lang;
+                this.sec=sec;
+            }
+
+        }
+        // var kaushal = new student("kaushal", 21, 45);
+        // console.log(kaushal);
+        // console.log(kaushal.org());
+        // console.log(kaushal.dob());
+        // console.log(student.add(10, 45));
+
+        var arun=new student1("arun",35,2, "java","A")
+        console.log(arun)
+
+        console.log(arun.org());
+        console.log(arun.dob());
+        console.log(student1.add(78,7));
+    </script>
+</body>
+
+</html>

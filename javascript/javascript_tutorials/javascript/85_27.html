@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let product = 1, s = 0, r = 0, i, n = 8128, ans,flag,str=" ";
+       
+            for (i = 1; i <=n/2; i++) {
+                r = n % i;
+                if (r == 0) {
+                     s=s+i;
+                     str=str+i+" "
+                    // s = `${n} number is not prime`
+                flag=2
+                }
+                else {
+                    // s = `${n} number is  prime`
+                flag=3
+                }
+            }
+            if(n==s){
+                console.log("number is perfect number ")
+            }
+            else{
+                console.log("number is not perfect number ")
+            }
+        // return "no is not prime"; 
+        console.log(+n +"is "+" divisible by"+str)
+    </script>
+</body>
+
+</html>

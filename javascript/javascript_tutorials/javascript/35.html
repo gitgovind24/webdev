@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <input id="eid" placeholder ="Employee name" type="text">
+    <button onclick="employee()">Submit</button>
+   
+    <script>
+         function employee()
+         {
+         var empid=document.getElementById("eid").value;
+         var check =/[DE]253[10-99]/
+         if((check.test(empid))){
+            alert("valid")
+         }
+         else{
+            alert("invalid")
+         }
+        }
+    </script>
+</body>
+</html>

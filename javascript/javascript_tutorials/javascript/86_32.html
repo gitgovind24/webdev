@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      
+        let product = 1, s = " ", r = 0, i, ans, flag = 1, x = 10, y = 100, str = " ",op;
+        function prime(n) {
+
+            
+            for (i = 2; i < n; i++) {
+                r = n % i;
+                if (r == 0) {
+                    //  s=s+i+" ";
+                    flag = 1;
+                    break
+                }
+                else {
+                    flag = 0;
+                }
+            }
+
+            if (flag == 0) {
+                s = `${n} is prime number `
+            } else {
+                s = `${n} is not  a prime number `
+            }
+
+            return [flag, s];
+        }
+        // return "no is not prime"; 
+        // for (j = x; j < y; j++) {
+
+        //     const [f, n] = prime(j)
+        //     if (f == 0) {
+        //         str = str + j + ", ";
+        //     }
+        // }
+
+        // console.log(" prime numbers in the range from " + x + " and " + y + " are :" + str)
+        [flag,s]=prime(2)
+        console.log(s)
+
+
+
+    </script>
+</body>
+
+</html>
